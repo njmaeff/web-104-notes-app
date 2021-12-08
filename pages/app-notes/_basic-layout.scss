@@ -1,0 +1,56 @@
+@use "~@njmaeff/webpack-static-site/scss/reset";
+@use "~@njmaeff/webpack-static-site/scss/print";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 960px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 5rem;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem;
+    font-family: 'Lobster', cursive;
+}
+
+h2 {
+    font-family: "Lobster", cursive;
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+}
+
+li {
+    margin: 0.2rem 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin: 0.2rem 0.5rem;
+    line-height: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}

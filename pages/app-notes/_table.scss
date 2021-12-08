@@ -1,0 +1,35 @@
+$light: #f0f0f0 !default;
+$dark: #0f0f0f !default;
+
+/* table design from https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l */
+.styled-table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.styled-table thead tr {
+    background-color: $light;
+    color: $dark;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 0.7rem 1rem;
+}
+
+.styled-table tbody tr {
+    border-bottom: thin solid $light;
+    background-color: $dark;
+    color: $light;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: $light;
+    color: $dark;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: medium solid $light;
+}

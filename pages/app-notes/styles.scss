@@ -1,0 +1,119 @@
+@use "basic-layout";
+
+$dark: darken(gray, 35%);
+@use "table" with (
+    $dark: $dark
+);
+
+:root {
+    background-color: #f0f0f0;
+    color: #0f0f0f;
+    font-family: 'Roboto', sans-serif;;
+}
+
+b {
+    font-weight: bold;
+}
+
+body {
+    max-width: 960px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    background-color: lightskyblue;
+    color: #0f0f0f;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 5rem;
+
+    div#firebaseui-auth-container {
+        align-self: center;
+
+        margin-top: 5rem;
+    }
+
+}
+
+main div.noteInput {
+    align-self: center;
+
+    textarea {
+        width: 90%;
+    }
+}
+
+main button {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+main section.note {
+    margin: 4rem 0;
+    width: 100%;
+    min-height: 60vh;
+
+    h2 {
+        text-align: center;
+        text-decoration: underline;
+    }
+
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+
+    & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        &:nth-child(2n-1) {
+            border-left: thin solid $dark;
+            border-right: thin solid $dark;
+        }
+    }
+
+
+}
+
+article {
+
+    background-color: lightgreen;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    border: thin solid $dark;
+    width: 100%;
+    cursor: grab;
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    /* button wrapper */
+    div.note-control-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        margin: 0.1rem;
+    }
+
+    p {
+        padding: 0.25rem;
+        word-break: break-all;
+        white-space: normal;
+        margin-bottom: 1rem;
+    }
+}
